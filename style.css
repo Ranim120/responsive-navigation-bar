@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    background: #ABD9FF;
+}
+
+nav img{
+    width: 80px;
+    margin: 10px 40px;
+    cursor: pointer;
+}
+
+nav ul{
+    float: right;
+    margin: 30px 20px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    line-height: 30px;
+    padding: 0 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+a.active, a:hover{
+    background: #B1B2FF;
+    transition: .4s;
+}
+
+.bar-btn{
+    font-size: 30px;
+    color: #fff;
+    line-height: 80px;
+    float: right;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 950px){
+    nav img{
+        width: 60px;
+        padding-top: 5px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 850px){
+    .bar-btn{
+        display: block;
+    }
+
+    nav ul{
+        position: fixed;
+        margin: 0;
+        width: 100%;
+        height: 50vh;
+        right: -100%;
+        background: #BCCEF8;
+        text-align: center;
+        transition: 1s;
+    }
+    nav ul li{
+        display: block;
+        padding-top: 20px;
+    }
+
+    #check:checked ~ ul{
+        right: 0;
+    }
+}
+
+#hero{
+    width: 100%;
+    height: 90vh;
+    background-image: url("img/cover2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
